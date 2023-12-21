@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.datetif.controller.UserController
 import com.datetif.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.database.FirebaseDatabase
@@ -15,6 +16,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 class ProfileActivity : AppCompatActivity() {
     lateinit var binding: ActivityProfileBinding
     lateinit var profileImage: CircleImageView
+    lateinit var userController: UserController
     var nameUser: String = ""
     var ra: String = ""
     var turma: String = ""
@@ -37,15 +39,21 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        userController = UserController(baseContext)
+
         profileImage = findViewById(R.id.profileImage)
 //        registerEvents()
-
-        nameUser = intent.getStringExtra("name_user").toString()
         ra = intent.getStringExtra("ra").toString()
         turma = intent.getStringExtra("turma").toString()
 
-        binding.nameTxt.text = nameUser
-        binding.raTxt.text = ra
+        reloadDataUser(turma)
+    }
+
+    fun reloadDataUser(turma: String){
+        val user = userController.getUserByRa(ra)
+        binding.nameTxt.text = user?.nome
+        binding.raTxt.text = user?.RA
+        binding.emailTxt.text = user?.email
         binding.classTxt.text = turma
     }
 

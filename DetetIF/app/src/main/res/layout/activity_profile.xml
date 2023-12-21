@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
-        android:src="@drawable/baseline_person_24"
+        android:src="@drawable/baseline_person_white"
         app:civ_border_color="@color/black"
         app:civ_border_width="2dp"
         />
@@ -86,6 +86,32 @@
         android:textStyle="italic"/>
 
     <TextView
+        android:id="@+id/emailLabelTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raTxt" />
+
+    <TextView
+        android:id="@+id/emailTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLabelTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0012345@academico.ifmg.edu.br"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textStyle="italic"/>
+
+    <TextView
         android:id="@+id/classLabelTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,7 +122,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
 
     <TextView
         android:id="@+id/classTxt"
