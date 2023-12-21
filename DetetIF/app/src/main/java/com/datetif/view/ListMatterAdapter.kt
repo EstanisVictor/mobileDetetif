@@ -7,12 +7,12 @@ import com.datetif.databinding.ItemRecyclerViewBinding
 import com.datetif.model.Matter
 import java.util.Locale
 
-class ListMatterAdapter(var listMatter: MutableList<Matter>?, var year: String) : RecyclerView.Adapter<MatterHold>() {
+class ListMatterAdapter(var listMatter: MutableList<Matter>?, var year: String, var ra: String) : RecyclerView.Adapter<MatterHold>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatterHold {
         val item = ItemRecyclerViewBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         val context = parent.context
-        return MatterHold(item, context, year)
+        return MatterHold(item, context, year, ra)
     }
 
     override fun onBindViewHolder(holder: MatterHold, position: Int) {

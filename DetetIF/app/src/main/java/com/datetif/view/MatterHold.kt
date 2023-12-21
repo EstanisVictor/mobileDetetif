@@ -7,15 +7,16 @@ import com.datetif.AssessmentActivity
 import com.datetif.databinding.ItemRecyclerViewBinding
 import com.datetif.model.Matter
 
-class MatterHold(var binding: ItemRecyclerViewBinding, val context: Context, var year: String) : RecyclerView.ViewHolder(binding.root){
+class MatterHold(var binding: ItemRecyclerViewBinding, val context: Context, var year: String, var ra: String) : RecyclerView.ViewHolder(binding.root){
     fun bind(matter: Matter){
         binding.firstTxt.text = matter.disc_code + " - " + year
         binding.secondTxt.text = matter.name
 
         binding.acsessBtn.setOnClickListener {
-             val transitionMatterActivity:Intent = Intent(context, AssessmentActivity::class.java)
-             transitionMatterActivity.putExtra("disc", matter.name)
-             context.startActivity(transitionMatterActivity)
+            val transitionMatterActivity:Intent = Intent(context, AssessmentActivity::class.java)
+            transitionMatterActivity.putExtra("disc", matter.name)
+            transitionMatterActivity.putExtra("ra", ra)
+            context.startActivity(transitionMatterActivity)
         }
     }
 }

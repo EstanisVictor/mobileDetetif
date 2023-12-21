@@ -22,6 +22,7 @@ class MatterActivity : AppCompatActivity() {
     lateinit var searchView:SearchView
     var classe:String? = null
     var year:Int? = null
+    var ra: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +71,8 @@ class MatterActivity : AppCompatActivity() {
     private fun getExtras() {
         classe = intent.getStringExtra("class")
         year = intent.getIntExtra("year", 0)
+        ra = intent.getStringExtra("ra").toString()
+
         if (classe == null) {
             classe = "Não informado"
         }
@@ -86,7 +89,7 @@ class MatterActivity : AppCompatActivity() {
 
         viewModel.loadMatters(matters)
 
-        adapter = ListMatterAdapter(viewModel.mattersList(), year.toString())
+        adapter = ListMatterAdapter(viewModel.mattersList(), year.toString(), ra)
 
         binding.matterList.layoutManager = LinearLayoutManager(baseContext)
         binding.matterList.adapter = adapter
@@ -94,15 +97,7 @@ class MatterActivity : AppCompatActivity() {
     }
 
     private fun createDisciplines() {
-        controller.saveMatter("OBMAT123", "Matematica")
-        controller.saveMatter("OBFIS123", "Fisica")
-        controller.saveMatter("OBCHE123", "Quimica")
-        controller.saveMatter("OBINF123", "Informatica")
-        controller.saveMatter("OBING123", "Ingles")
-        controller.saveMatter("OBPOO123", "Programação Orientada a Objetos")
-        controller.saveMatter("OBBD123", "Banco de Dados")
-        controller.saveMatter("OBWEB123", "Desenvolvimento Web")
-        controller.saveMatter("OBIA123", "Inteligencia Artificial")
-        controller.saveMatter("OBES123", "Engenharia de Software")
+        controller.saveMatter("OBMAT123", "Ciências da Natureza e Matemática")
+        controller.saveMatter("OBFIS123", "Linguagens e Ciências Humanas")
     }
 }

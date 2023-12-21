@@ -30,10 +30,9 @@ class ListQuaters : AppCompatActivity() {
         userController = UserController(baseContext)
         viewModel = ViewModelProvider(this).get(ListQuaterVM::class.java)
 
-        configuraRecycleView()
-
         ra = intent.getStringExtra("ra").toString()
 
+        configuraRecycleView()
         registerEvents()
     }
 
@@ -60,6 +59,7 @@ class ListQuaters : AppCompatActivity() {
 
     private fun configuraRecycleView() {
         var quaters = quaterController.getAll()
+        var user: User? = userController.getUserByRa(ra)
 
         if (quaters.isEmpty()) {
             createQuater()
@@ -68,7 +68,12 @@ class ListQuaters : AppCompatActivity() {
 
         viewModel.loadQuaters(quaters)
 
-        adapter = ListQuaterAdapter(viewModel.quatersList())
+        if (user != null) {
+            adapter = ListQuaterAdapter(viewModel.quatersList(), user.RA)
+        }else{
+            adapter = ListQuaterAdapter(viewModel.quatersList(), "0")
+        }
+
 
         binding.quaterList.layoutManager = LinearLayoutManager(baseContext)
         binding.quaterList.adapter = adapter
