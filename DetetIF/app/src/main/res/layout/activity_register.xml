@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/tituloTxt"
@@ -32,7 +33,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_marginStart="4dp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/greenText"/>
 
     <EditText
         android:id="@+id/nameInput"
@@ -45,7 +46,8 @@
         android:hint="Informe o seu nome"
         android:background="@drawable/border"
         android:layout_marginTop="12dp"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/raLabelTxt"
@@ -58,7 +60,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_marginStart="4dp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/greenText"/>
 
     <EditText
         android:id="@+id/raInput"
@@ -71,9 +73,8 @@
         android:hint="Informe o seu RA"
         android:background="@drawable/border"
         android:inputType="text"
-        android:layout_marginTop="12dp"/>
-
-    <!--EMAIL -->
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/emailLabelTxt"
@@ -86,7 +87,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_marginStart="4dp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/greenText"/>
 
     <EditText
         android:id="@+id/emailInput"
@@ -99,10 +100,8 @@
         android:hint="Informe o seu email"
         android:background="@drawable/border"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="12dp"/>
-
-    <!--CAMPO SENHA-->
-
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/senhaLabelTxt"
@@ -115,7 +114,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_marginStart="4dp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/greenText"/>
 
     <EditText
         android:id="@+id/passwordInput"
@@ -128,7 +127,8 @@
         android:background="@drawable/border"
         android:hint="Informe uma senha"
         android:inputType="textPassword"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/saveBtn"

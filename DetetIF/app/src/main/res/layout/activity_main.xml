@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/logo"
@@ -33,11 +34,13 @@
         style="@style/Edit_Text"
         android:hint="RA"
         android:drawableRight="@drawable/ic_number"
-        android:inputType="number"/>
+        android:maxLength="7"
+        android:inputType="number"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/errorRaTxt"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/view_back"
         app:layout_constraintEnd_toEndOf="@id/view_back"
@@ -54,11 +57,12 @@
         style="@style/Edit_Text"
         android:hint="Senha"
         android:drawableRight="@drawable/ic_eye"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/errorPasswordTxt"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/view_back"
         app:layout_constraintEnd_toEndOf="@id/view_back"
@@ -88,7 +92,8 @@
         android:layout_height="wrap_content"
         android:text="Esqueceu a Senha?"
         android:textSize="19sp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/inscrevaTxt"

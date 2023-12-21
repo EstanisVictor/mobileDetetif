@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@color/black">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
@@ -42,7 +43,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginLeft="20dp"/>
 
     <TextView
@@ -55,7 +56,7 @@
         android:textSize="20sp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="italic"/>
 
     <TextView
@@ -68,7 +69,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginLeft="20dp"/>
 
     <TextView
@@ -81,21 +82,21 @@
         android:textSize="20sp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="italic"/>
 
     <TextView
         android:id="@+id/classLabelTxt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:text="Turma:"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raTxt" />
 
     <TextView
         android:id="@+id/classTxt"
@@ -107,7 +108,7 @@
         android:textSize="20sp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="italic"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

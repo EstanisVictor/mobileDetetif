@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ListQuaters">
+    tools:context=".ListQuaters"
+    android:background="@color/black">
 
     <View
         android:id="@+id/navAnoLetivo"
@@ -26,7 +27,7 @@
         android:layout_marginTop="30dp"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/logo"
@@ -46,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Selecione um trimestre:"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginLeft="8dp"

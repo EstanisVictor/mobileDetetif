@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MatterActivity">
+    tools:context=".MatterActivity"
+    android:background="@color/black">
 
     <View
         android:id="@+id/navMatter"
@@ -26,7 +27,7 @@
         android:layout_marginTop="30dp"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/logo"
@@ -49,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selecione uma disciplina:"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginLeft="8dp"
@@ -88,6 +89,6 @@
         android:layout_height="0dp"
         android:padding="35dp"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0"/>
+        app:layout_constraintHorizontal_bias="0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
