@@ -23,7 +23,7 @@ class UserController(var context: Context) {
     }
 
     fun validateLogin(ra: String, senha: String): ResponseCredentials {
-        val usr:User ? = userRepository.getUser(ra)
+        val usr:User ? = getUserByRa(ra)
 
         return when {
             usr == null -> ResponseCredentials.USER_NOT_FOUND
@@ -34,7 +34,7 @@ class UserController(var context: Context) {
 
     fun updateUser(ra: String, novaSenha: String): ResponseCredentials {
 
-        return when (userRepository.getUser(ra)) {
+        return when (getUserByRa(ra)) {
             null -> ResponseCredentials.USER_NOT_FOUND
             else -> {
                 userRepository.updateUser(ra, novaSenha)
@@ -47,3 +47,4 @@ class UserController(var context: Context) {
         return userRepository.getUser(ra)
     }
 }
+

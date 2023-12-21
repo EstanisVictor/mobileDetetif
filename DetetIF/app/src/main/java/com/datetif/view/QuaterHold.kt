@@ -7,7 +7,8 @@ import com.datetif.MatterActivity
 import com.datetif.databinding.ItemRecyclerViewBinding
 import com.datetif.model.QuaterEntity
 
-class QuaterHold(var binding: ItemRecyclerViewBinding, val context: Context, var ra: String) : RecyclerView.ViewHolder(binding.root) {
+class QuaterHold(var binding: ItemRecyclerViewBinding, val context: Context, var ra: String)
+        : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(quater: QuaterEntity){
                 binding.firstTxt.text = quater.classe + " - " + quater.year
@@ -22,3 +23,4 @@ class QuaterHold(var binding: ItemRecyclerViewBinding, val context: Context, var
                 }
         }
 }
+

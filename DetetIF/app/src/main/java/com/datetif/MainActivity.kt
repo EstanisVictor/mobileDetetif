@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun executeLogin() {
-
         val raInput = binding.raInput.text.toString()
         val passwordInput = binding.passwordInput.text.toString()
 
@@ -60,14 +59,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding.errorPasswordTxt.text = ""
 
         if (raInput == "" && passwordInput == ""){
-//            binding.errorRaTxt.text = "RA não pode ser vazio"
-//            binding.errorPasswordTxt.text = "Senha não pode ser vazia"
             Toast.makeText(baseContext, "RA e Senha não podem ser vazios", Toast.LENGTH_LONG).show()
         }else if (raInput == ""){
-//            binding.errorRaTxt.text = "RA não pode ser vazio"
             Toast.makeText(baseContext, "RA não pode ser vazio", Toast.LENGTH_LONG).show()
         }else if (passwordInput == ""){
-//            binding.errorPasswordTxt.text = "Senha não pode ser vazia"
             Toast.makeText(baseContext, "Senha não pode ser vazia", Toast.LENGTH_LONG).show()
         }else{
             val valida = userController.validateLogin(

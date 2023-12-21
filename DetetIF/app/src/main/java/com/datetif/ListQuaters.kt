@@ -37,6 +37,7 @@ class ListQuaters : AppCompatActivity() {
     }
 
     private fun registerEvents() {
+        //transitando para o perfil
         binding.profileBtn.setOnClickListener {
             var user: User? = userController.getUserByRa(ra)
             var quaters = quaterController.getAll()
@@ -53,7 +54,6 @@ class ListQuaters : AppCompatActivity() {
                 transitionProfile.putExtra("turma", quaters.get(0).classe)
                 startActivity(transitionProfile)
             }
-
         }
     }
 

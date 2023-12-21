@@ -41,9 +41,7 @@ class AssessmentActivity : AppCompatActivity() {
             val url = URL("https://detetifserver.pagekite.me/api/answerCorrection/response/2_TRIM_2023/$ra")
             val req: HttpsURLConnection = url.openConnection() as HttpsURLConnection
             req.requestMethod = "GET"
-
             val contentType = req.getHeaderField("Content-Type")
-
             if (contentType?.startsWith("image/") == true) {
                 val inputStream = req.inputStream
                 val bitmap = BitmapFactory.decodeStream(inputStream)
@@ -53,9 +51,7 @@ class AssessmentActivity : AppCompatActivity() {
                     binding.assessmentImage.setImageBitmap(bitmap)
                 }
             } else {
-
                 val resposta = "  Não há nenhum gabarito\n      corrigido para o RA \n              $ra"
-
                 val spannable = SpannableString(resposta)
 
                 spannable.setSpan(ForegroundColorSpan(Color.WHITE), 0, 49, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
@@ -64,11 +60,8 @@ class AssessmentActivity : AppCompatActivity() {
 
                 binding.assessmentReponse.visibility = View.VISIBLE
                 binding.assessmentReponse.text = spannable
-
-                // processarJsonResponse(jsonResponse)
             }
         }
-
         downloader.run()
     }
 }

@@ -15,3 +15,4 @@ class ListQuaterVM : ViewModel() {
         return quaters.value
     }
 }
+
